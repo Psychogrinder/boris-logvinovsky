@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8">
+    <title>Студия Nerds</title>
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,700&amp;subset=cyrillic" rel="stylesheet">
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="https://api-maps.yandex.ru/1.1/index.xml" type="text/javascript"></script>
+
+    <script type="text/javascript">
+        window.onload = function () {
+        // Создает экземпляр карты и привязывает его к созданному контейнеру
+            var map = new YMaps.Map(document.getElementById("YMapsID"));
+
+            var s = new YMaps.Style();
+
+            // Устанавливает начальные параметры отображения карты: центр карты и коэффициент масштабирования
+            map.setCenter(new YMaps.GeoPoint(30.32175540, 59.93934610), 17);
+
+            s.iconStyle = new YMaps.IconStyle();
+            s.iconStyle.href = "img/map-marker.png";
+            s.iconStyle.size = new YMaps.Point(231, 190);
+            s.iconStyle.offset = new YMaps.Point(-50, -190);
+
+            var placemark = new YMaps.Placemark(new YMaps.GeoPoint(30.32311527,59.93876365), {style: s});
+            placemark.description = "Студия NЁRDS";
+            map.addOverlay(placemark);
+        };
+    </script>
+  </head>
+  <body>
+    <header class="index-header">
+      <div class="container">
+        <div class="upper clearfix">
+          <a href="index.html" class="logo"></a>
+          <nav class="menu">
+            <ul class="index-menu">
+              <li><a href="index.html">СТУДИЯ</a></li>
+              <li><a href="#">КЛИЕНТЫ</a></li>
+              <li><span>МАГАЗИН</span></li>
+              <li><a href="#">КОНТАКТЫ</a></li>
+            </ul>
+          </nav>
+          <div class="cart-block">
+            <a class="login" href="#">КОРЗИНА</a>
+          </div>
+        </div>
+        <h1 class="title-catalog">Магазин готовых шаблонов</h1>
+      </div>
+    </header>
+    <main class="container clearfix">
+      <section class="filters">
+          <h2>СТОИМОСТЬ:</h2>
+          <form action="form.php" method="GET">
+            <div class="range-filter">
+              <div class="range-controls">
+                <div class="scale">
+                  <div class="bar" style="margin-left: 20%; width: 30%"></div>
+                </div>
+                <div class="toggle toggle-min"></div>
+                <div class="toggle toggle-max"></div>
+              </div>
+              <div class="price-controls">
+                <label class="min-price">от <input name="min-price" type="text" value="0"></label>
+                <label class="max-price">до <input name="max-price" type="text" value="15000"></label>
+              </div>
+            </div>
+
+
+
+          <h2>СЕТКА:</h2>
+          <div class="filter-item">
+            <input type="radio" name="type" id="adaptive" checked>
+            <label for="adaptive">Адаптивная</label>
+          </div>
+          <div class="filter-item">
+            <input type="radio" name="type" id="fixed">
+            <label for="fixed">Фиксированная</label>
+          </div>
+          <div class="filter-item">
+            <input type="radio" name="type" id="responsive">
+            <label for="responsive">Резиновая</label>
+          </div>
+          <h2>ОСОБЕННОСТИ:</h2>
+          <div class="filter-item">
+            <input type="checkbox" name="features" id="slider" checked>
+            <label for="slider">Слайдер</label>
+          </div>
+          <div class="filter-item">
+            <input type="checkbox" name="features" id="advantage">
+            <label for="advantage">Блок преимуществ</label>
+          </div>
+          <div class="filter-item">
+            <input type="checkbox" name="features" id="news" checked>
+            <label for="news">Новости</label>
+          </div>
+          <div class="filter-item">
+            <input type="checkbox" name="features" id="gallery">
+            <label for="gallery">Галерея</label>
+          </div>
+          <div class="filter-item">
+            <input type="checkbox" name="features" id="cart">
+            <label for="cart">Корзина</label>
+          </div>
+          <button type="button" class="btn result">ПОКАЗАТЬ</button>
+        </form>
+      </section>
+      <section class="result-templates clearfix">
+        <div class="sort-templates">
+          <h2 class="sort-head">СОРТИРОВАТЬ:</h2>
+          <form action="#" class="sort-items">
+            <input type="radio" name="sort" id="by-cost" checked>
+            <label for="by-cost">ПО ЦЕНЕ</label>
+            <input type="radio" name="sort" id="by-type">
+            <label for="by-type">ПО ТИПУ</label>
+            <input type="radio" name="sort" id="by-label">
+            <label for="by-label">ПО НАЗВАНИЮ</label>
+          </form>
+          <form action="#" class="sort-increase">
+            <input type="radio" name="up-down" id="down" class="down-arrow" checked>
+            <label for="down"></label>
+            <input type="radio" name="up-down" id="up" class="up-arrow">
+            <label for="up"></label>
+          </form>
+        </div>
+        <div class="template-demo">
+          <div class="browser"></div>
+          <div class="template-image sedona"></div>
+          <div class="template-demo-checked">
+            <h2>SEDONA</h2>
+            <span>Информационный сайт<br>для туристов</span>
+            <button class="btn template-btn">9 900 РУБ.</button>
+          </div>
+        </div>
+        <div class="template-demo">
+          <div class="browser"></div>
+          <div class="template-image pink"></div>
+          <div class="template-demo-checked">
+            <h2>PINK</h2>
+            <span>Информационный сайт<br>для туристов</span>
+            <button class="btn template-btn">9 900 РУБ.</button>
+          </div>
+        </div>
+        <div class="template-demo">
+          <div class="browser"></div>
+          <div class="template-image barbershop"></div>
+          <div class="template-demo-checked">
+            <h2>BARBERSHOP</h2>
+            <span>Информационный сайт<br>для туристов</span>
+            <button class="btn template-btn">9 900 РУБ.</button>
+          </div>
+        </div>
+        <div class="template-demo">
+          <div class="browser"></div>
+          <div class="template-image mishka"></div>
+          <div class="template-demo-checked">
+            <h2>MISHKA</h2>
+            <span>Информационный сайт<br>для туристов</span>
+            <button class="btn template-btn">9 900 РУБ.</button>
+          </div>
+        </div>
+        <div class="template-demo">
+          <div class="browser"></div>
+          <div class="template-image aplus"></div>
+          <div class="template-demo-checked">
+            <h2>A PLUS</h2>
+            <span>Информационный сайт<br>для туристов</span>
+            <button class="btn template-btn">9 900 РУБ.</button>
+          </div>
+        </div>
+        <div class="template-demo">
+          <div class="browser"></div>
+          <div class="template-image kvast"></div>
+          <div class="template-demo-checked">
+            <h2>KVAST</h2>
+            <span>Информационный сайт<br>для туристов</span>
+            <button class="btn template-btn">9 900 РУБ.</button>
+          </div>
+        </div>
+        <div class="pages">
+          <span class="page-active">1</span>
+          <a href="#" class="page-number">2</a>
+          <a href="#" class="page-number">3</a>
+          <a href="#" class="page-next">СЛЕДУЮЩАЯ</a>
+        </div>
+      </section>
+      <div class="feedback-popup">
+        <p>Напишите нам</p>
+        <button type="button" class="cross"></button>
+        <form action="https://echo.htmlacademy.ru" method="post" id="feedback-form">
+         <div class="name-email clearfix">
+           <div class="name-field">
+             <label for="your-name">Ваше имя:</label>
+             <input type="text" id="your-name" name="feedback" class="feedback-name" placeholder="Представьтесь, пожалуйста" >
+           </div>
+           <div class="email-field">
+             <label for="your-email">Ваш e-mail:</label>
+             <input type="text" id="your-email" name="feedback" class="feedback-email" placeholder="Для отправки ответа" >
+           </div>
+         </div>
+         <div class="letter-container">
+           <label>Текст письма:</label>
+           <textarea id="your-letter" name="feedback" class="feedback-letter" placeholder="В свободной форме" ></textarea>
+         </div>
+         <button type="submit" class="btn feedback-button">ОТПРАВИТЬ</button>
+        </form>
+      </div>
+    </main>
+    <footer>
+      <section class="main-map">
+        <div class="yandex-map" id="YMapsID"></div>
+        <div class="contacts">
+          <h2>NЁRDS DESIGN STUDIO</h2>
+          <p>
+            191186, Санкт-Петербург,<br>
+            ул. Б. Конюшенная, д. 19/8
+          </p>
+          <p>
+            тел. +7 (812) 275-75-75
+          </p>
+          <button type="button" class="btn feedback">НАПИШИТЕ НАМ</button>
+        </div>
+      </section>
+      <section class="social-friends container clearfix">
+        <div class="social">
+          <a class="social-btn social-btn-vk" href="#"></a>
+          <a class="social-btn social-btn-fb" href="#"></a>
+          <a class="social-btn social-btn-ig" href="#"></a>
+        </div>
+        <div class="friends">
+          <p class="footer-friends-big">Давайте дружить, это выгодно!</p>
+          <p class="footer-friends-small">Скидка 10% для друзей из социальных сетей.</p>
+        </div>
+      </section>
+    </footer>
+    <script src="js/script.js"></script>
+  </body>
+</html>
