@@ -10,29 +10,28 @@
   </head>
   <body>
     <header class="container">
-      <nav>
-        <ul class="main-menu clearfix">
-          <li><a href="#portfolio">ПОРТФОЛИО</a></li>
-          <li><a href="#skills">НАВЫКИ</a></li>
-          <li><a href="#contacts">КОНТАКТЫ</a></li>
-        </ul>
-      </nav>
-    </header>
-    <main>
-      <section class="about-me container clearfix">
-        <div class="portrait-block left">
-          <div class="portrait">
+      <div class="portrait-block">
+        <div class="portrait">
 
-          </div>
-          <div class="portrait-name">
-            <span>Борис Логвиновский<br>фронтенд-разработчик</span>
-          </div>
         </div>
-
-        <div class="description right">
+        <div class="portrait-name">
+          <span>Борис Логвиновский<br>фронтенд-разработчик</span>
+        </div>
+      </div>
+      <div class="menu-block">
+        <nav>
+          <ul class="main-menu">
+            <li><a href="#portfolio">ПОРТФОЛИО</a></li>
+            <li><a href="#skills">НАВЫКИ</a></li>
+            <li><a href="#contacts">КОНТАКТЫ</a></li>
+          </ul>
+        </nav>
+        <div class="description">
           <p>В вёрстке для меня главное — аккуратность и читабельность кода. Стараюсь находить изящные решения для сложных задач и соблюдать максимальную семантичность разметки. Чётко следую техническому заданию и внимателен к мелочам.</p>
         </div>
-      </section>
+      </div>
+    </header>
+    <main>
       <section class="portfolio clearfix">
         <a name="portfolio"></a>
         <a href="gllacy/index.html" target="_blank">
@@ -65,9 +64,16 @@
             <span>Блог об автомобилях</span>
           </div>
         </a>
+        <a href="" target="_blank">
+          <div class="portfolio-page left">
+            <img src="img/coming.jpg" width="80%" alt="">
+            <span>Coming soon...</span>
+          </div>
+        </a>
       </section>
       <section class="skills">
         <a name="skills"></a>
+        <div class="skills-label">НАВЫКИ:</div>
         <div class="white">
           <div class="one-skill">
             <span>HTML5 & CSS3</span>

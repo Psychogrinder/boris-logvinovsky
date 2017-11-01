@@ -27,20 +27,38 @@ body{
 .container{
   max-width: 1200px;
   margin: 0 auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: flex-start;
+  flex-wrap: wrap;
+}
+
+.portrait-block{
+  /*flex-basis: 30%;*/
+  flex: 0 0 300px;
+  margin-right: 100px;
+  margin-top: 30px;
+  margin-left: 50px;
+  /*min-width: 250px;*/
+}
+
+.menu-block{
+  /*flex-basis: 70%;*/
+  flex: 1 0 300px;
+  /*max-width: calc(100% - 450px);*/
 }
 
 nav {
-  float: right;
-}
-
-header{
-  height: 55px;
-  display: block;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
 }
 
 .main-menu li{
   display: inline-block;
-  margin: 20px 30px 0 30px;
+  margin: 20px 40px 20px 0;
 }
 
 .main-menu li a{
@@ -50,14 +68,6 @@ header{
   font-weight: bold;
   line-height: 30px;
   color: #000000;
-}
-
-.about-me{
-  height: 400px;
-}
-
-.portrait-block{
-  width: 30%;
 }
 
 .portrait{
@@ -75,18 +85,18 @@ header{
   font-family: "Roboto", Arial, sans-serif;
   font-size: 28px;
   font-weight: bold;
-  line-height: 30px;
+  line-height: 40px;
   text-align: center;
+  padding: 20px 0 20px 0;
 }
 
 .description{
-  padding: 40px;
-  width: 60%;
+  padding: 40px 40px 40px 0;
   text-decoration: none;
   font-family: "Roboto", Arial, sans-serif;
-  font-size: 28px;
+  font-size: 24px;
   font-weight: normal;
-  line-height: 30px;
+  line-height: 28px;
   text-align: left;
 }
 
@@ -131,6 +141,7 @@ header{
   line-height: 40px;
   display: block;
 }
+
 .white{
   padding-top: 50px;
   padding-bottom: 50px;
@@ -140,13 +151,26 @@ header{
   align-items: stretch;
   flex-wrap: wrap;
   align-content: stretch;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.skills-label{
+  background-color: #fff;
+  text-align: center;
+  font-family: "Roboto", Arial, sans-serif;
+  font-size: 30px;
+  font-weight: bold;
+  line-height: 40px;
+  color: #383838;
+  padding-top: 30px;
 }
 
 .one-skill{
-  min-height: 350px;
+  min-height: 250px;
   flex-basis: 50%;
   text-align: center;
-  padding-top: 40px;
+  padding-top: 20px;
 }
 
 .one-skill span{
@@ -176,6 +200,7 @@ header{
   background-repeat: no-repeat;
   flex-basis: 25%;
   background-size: contain;
+  background-position: center;
   min-height: 100px;
   margin: 0 40px;
 }
