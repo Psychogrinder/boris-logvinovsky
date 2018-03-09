@@ -54,6 +54,7 @@ nav {
   flex-direction: row;
   justify-content: flex-start;
   align-items: center;
+  flex-wrap: wrap;
 }
 
 .main-menu li{
@@ -113,12 +114,14 @@ nav {
 }
 
 .portfolio-page{
-  /*width: 33.333%;*/
+  min-width: 200px;
   text-align: center;
   padding-top: 40px;
   flex-grow: 1;
-  flex-basis: 33%;
+  flex-basis: calc(33% - 80px);
   flex-shrink: 1;
+  margin: 0 40px 0 40px;
+  text-decoration: none;
 }
 
 .portfolio-page img{
@@ -129,7 +132,6 @@ nav {
 
 .portfolio-page span{
   display: block;
-  text-decoration: none;
   font-family: "Roboto", Arial, sans-serif;
   font-size: 18px;
   font-weight: normal;
@@ -195,14 +197,37 @@ nav {
   margin: 0 auto;
   margin-top: 30px;
 }
+.education{
+  min-height: 200px;
+  background-color: #64FFBB;
+}
 
 .courses{
-  height: 200px;
-  background-color: #64FFBB;
   display: flex;
   flex-direction: row;
   justify-content: center;
   align-items: center;
+  flex-wrap: wrap;
+}
+
+.courses-title{
+  display: inline-block;
+  font-family: "Roboto", Arial, sans-serif;
+  font-size: 24px;
+  font-weight: bold;
+  line-height: 30px;
+  color: #fff;
+  margin-left: 30px;
+  border: 25px solid #38966d;
+  background-color: #38966d;
+}
+
+.courses-half{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
 }
 
 .learning{
@@ -211,6 +236,7 @@ nav {
   background-size: contain;
   background-position: center;
   min-height: 100px;
+  min-width: 200px;
   margin: 0 40px;
 }
 
@@ -237,6 +263,7 @@ footer{
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
+  flex-wrap: wrap;
 }
 
 .anchor-contacts{
