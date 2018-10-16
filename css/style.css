@@ -197,6 +197,58 @@ nav {
   margin: 0 auto;
   margin-top: 30px;
 }
+
+.juniorlab{
+    background-color: #383838;
+    background-image: url(../img/elama_skills.png);
+    background-size: 700px;
+    background-repeat: no-repeat;
+    background-position: 110% 215%;
+    font-family: "Roboto", Arial, sans-serif;
+    color: #ffffff;
+    padding-bottom: 40px;
+}
+
+.elama-info{
+    margin: 40px 80px;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.title-info{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    flex-basis: 30%;
+    font-size: 24px;
+    font-weight: bold;
+    line-height: 28px;
+}
+
+.title-info div{
+    text-align: center;
+}
+
+.text-info{
+    flex-basis: 70%;
+    min-width: 300px;
+    font-size: 20px;
+    line-height: 24px;
+    font-weight: normal;
+}
+
+.dark-link{
+    color: #cec3ff;
+}
+
+.elama-skills{
+    display: flex;
+}
+
+.elama-skills span{
+    margin: 0 40px;
+}
+
 .education{
   min-height: 200px;
   background-color: #64FFBB;
